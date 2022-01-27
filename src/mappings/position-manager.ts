@@ -19,7 +19,7 @@ function getPosition(event: ethereum.Event, tokenId: BigInt): Position | null {
 
     // the following call reverts in situations where the position is minted
     // and deleted in the same block - from my investigation this happens
-    // in calls from  BancorSwap
+    // in calls from  LikeSwap
     // (e.g. 0xf7867fa19aa65298fadb8d4f72d0daed5e836f3ba01f0b9b9631cdc6c36bed40)
     if (!positionCall.reverted) {
       let positionResult = positionCall.value
@@ -92,7 +92,7 @@ export function handleIncreaseLiquidity(event: IncreaseLiquidity): void {
   }
 
   // temp fix
-  if (Address.fromString(position.pool).equals(Address.fromHexString('0x8fe8d9bb8eeba3ed688069c3d6b556c9ca258248'))) {
+  if (Address.fromString(position.pool).equals(Address.fromHexString('0x087fC0c84d10935A8A0331A489738483e453b986'))) {
     return
   }
   let bundle = Bundle.load('1')
@@ -128,7 +128,7 @@ export function handleDecreaseLiquidity(event: DecreaseLiquidity): void {
   }
 
   // temp fix
-  if (Address.fromString(position.pool).equals(Address.fromHexString('0x8fe8d9bb8eeba3ed688069c3d6b556c9ca258248'))) {
+  if (Address.fromString(position.pool).equals(Address.fromHexString('0x087fC0c84d10935A8A0331A489738483e453b986'))) {
     return
   }
 
@@ -158,7 +158,7 @@ export function handleCollect(event: Collect): void {
   if (position == null) {
     return
   }
-  if (Address.fromString(position.pool).equals(Address.fromHexString('0x8fe8d9bb8eeba3ed688069c3d6b556c9ca258248'))) {
+  if (Address.fromString(position.pool).equals(Address.fromHexString('0x087fC0c84d10935A8A0331A489738483e453b986'))) {
     return
   }
 

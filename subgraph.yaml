@@ -1,5 +1,5 @@
 specVersion: 0.0.2
-description: Likeswap is a decentralized protocol for automated token exchange on Ethereum.
+description: Likeswap is a decentralized protocol for automated token exchange on BSC.
 repository: https://github.com/Likeswap/likeswap-v3-subgraph
 schema:
   file: ./schema.graphql
@@ -13,7 +13,7 @@ dataSources:
     source:
       address: '0xcedb8a736b666a90182a270a016bd7d3114fe9da'
       abi: Factory
-      startBlock: 12369621
+      startBlock: 1
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -42,7 +42,7 @@ dataSources:
     source:
       address: '0xC36442b4a4522E871399CD717aBDD847Ab11FE88'
       abi: NonfungiblePositionManager
-      startBlock: 12369651
+      startBlock: 1
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
